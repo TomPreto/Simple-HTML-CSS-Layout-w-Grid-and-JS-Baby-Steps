@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --BGcolour: #FFC3A1;
+}
+
+.body {
+    height: 100vh;
+    background: #ee8547;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+}
+
+.NavBar {
+    grid-column: 1/ span 12;
+    grid-row: 1/ span 1;
+}
+
+.Footer {
+    grid-column: 1 / span 12;
+    grid-row: 12;
+}
+
+.FunctionBar {
+    grid-column: 3 / span 8;
+    grid-row: 2 / span 1;
+}
+
+.LeftPanel {
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 10;
+}
+
+.RightPanel {
+    grid-column: 11 / span 2;
+    grid-row: 2 / span 10;
+}
+
+.Content {
+    grid-column: 3 / span 8;
+    grid-row: 3 / span 9;
+    text-align: center;
+    font-size: 2em;
+}
+
+/*calling class "el" to pass BGColour and BoxShadow to all the children of class "body"*/
+.el {
+    box-shadow: 2px 4px 80px rgba(204, 72, 32, 0.35);
+    background: var(--BGcolour);
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+/*button style*/
+.colourBtn {
+    font-size: 0.5em;
+}
+
+/*Styling the page Nav*/
+.navSection {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navUL {
+    display: flex;
+    list-style: none;
+}
+
+.navLI {
+    margin-right: 15px;
+}
+
+.navLI a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2em;
+}
+
+.navLI a:hover {
+    text-decoration: underline;
+    color: mediumpurple;
+    transition: text-decoration, color 500ms;
+}
+
+.navLI a:visited {
+    color: gray;
+}
