@@ -38,13 +38,17 @@ submitTodoBtn.addEventListener("click", () => {
 // Trigger the code in the body
 // call the input field to extract the value
     let extractedText = todoInputField.value;
-    console.log(extractedText);
-    let text2d = document.createTextNode(extractedText);
+    if(extractedText === ""){ //Could use == if we were accessing html directly, but if checking equality between two variables it is better to use ===
+        alert("Cannot Add Empty Input Field!");
+    } else {
+        console.log(extractedText);
+        let text2d = document.createTextNode(extractedText);
 
-    // create virtual ListItem to store extracted 2D text
-    let textNodeListItem = document.createElement("li");
-    textNodeListItem.appendChild(text2d);
-    todoBodyUL.appendChild(textNodeListItem);
+        // create virtual ListItem to store extracted 2D text
+        let textNodeListItem = document.createElement("li");
+        textNodeListItem.appendChild(text2d);
+        todoBodyUL.appendChild(textNodeListItem);
 
-    todoInputField.value = ""; //reset input field
+        todoInputField.value = ""; //reset input field
+    } //End of Else
 })
